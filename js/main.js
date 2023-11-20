@@ -160,16 +160,99 @@ if(num % 2 === 0){
 
 //
 
-let num1 = prompt('Введите 1 число: ');
-let num2 = prompt('Введите 2 число: ');
-let num3 = prompt('Введите 3 число: ');
+// let num1 = prompt('Введите 1 число: ');
+// let num2 = prompt('Введите 2 число: ');
+// let num3 = prompt('Введите 3 число: ');
 
-if(num1 > num2 && num1 > num3){
-    console.log(`Число ${num1} наибольшее`);
-}else if(num2 > num1 && num2 > num3){
-    console.log(`Число ${num2} наибольшее`);
-}else if(num3 > num1 && num3 > num2){
-    console.log(`Число ${num3} наибольшее`);
-}else{
-    console.log(`Числа равны`);
+// if(num1 > num2 && num1 > num3){
+//     console.log(`Число ${num1} наибольшее`);
+// }else if(num2 > num1 && num2 > num3){
+//     console.log(`Число ${num2} наибольшее`);
+// }else if(num3 > num1 && num3 > num2){
+//     console.log(`Число ${num3} наибольшее`);
+// }else{
+//     console.log(`Числа равны`);
+// }
+
+// ДЗ к 17 уроку
+
+
+fn(11);
+function fn(y = 0){
+    if(y < 10){
+        console.log('Константа меньше 10');
+    }else{
+        console.log('Константа не меньше 10');
+    }
 }
+
+//
+
+ const fn1 = () => alert('Hello, World');
+ fn1();
+
+ //
+
+ const fn2 = () => console.log('JavaScript');
+ fn2();
+
+ //
+
+
+ fnText('text101');
+
+ function fnText(text){
+    // let text = 'lorem';
+    if(text == 'lorem'){
+        console.log('У вас ошибка в тексте');
+    }else{
+        console.log('Содержимое текста: ' + text)
+    }
+ }
+
+ //
+
+ // ДЗ к 18 уроку
+
+ let man = {
+    firstName: 'John',
+    lastName: 'Marmilon',
+    age: 20,
+    rise: 180,
+    money: '2000$',
+    log: 'John_M',
+    passw: 1234,
+    address: {
+        street: 'Lohnes',
+        numberr: 550,
+    }
+ }
+
+ let testString = 'tipa Password';
+
+//  if(testString === man.passw){
+//     console.log(`Добро пожаловать ${man.firstName}, ${man.lastName}.Ваш логин: ${man.log}`)
+//  }else{
+//     console.log(`Указанный пороль не верен${testString}. Попробуйте еще раз`)
+//  }
+
+fnMan('tipa Password');
+
+ function fnMan(testString){
+    if(testString === man.passw){
+        console.log(`Добро пожаловать ${man.firstName}, ${man.lastName}.Ваш логин: ${man.log}`)
+     }else{
+        console.log(`Указанный пороль не верен ${testString}. Попробуйте еще раз`)
+     }
+ }
+
+ //
+
+ // Цикл for > while; for(let i = 0;i < 3;i++) // с 1 до 10 через while
+
+
+ let j = 1;
+ while(j <= 10){
+    console.log(`Число: ${j}`);
+    j++;
+ }
