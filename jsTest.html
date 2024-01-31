@@ -3,10 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jsTest</title>
+    <style>
+        .ul-class{
+            color:green;
+        }
+        .block{
+            width: 200px;
+            height: 200px;
+        }
+        .block-red{
+            background-color: red;
+        }
+        .block-blue{
+            background-color: blue;
+        }
+        .active{
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
+    <div class="block block-red" id="block-1"></div>
+    <div class="block block-blue" id="block-2"></div>
     
-    <script src="js/main.js"></script>
+    
+    
+    
+    <ul id="ul_ID">
+        <li class="li">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    
+    <p>lorem</p>
+
+
+    <!-- <script src="js/main.js"></script> -->
+    
+    
+     
+    
+    <!-- ДЗ 24 DOM
+    Узлы - 
+    parentNode
+    childNodes
+    firstChild
+    lastChild
+    previousSibling
+    nextSibling -->
+
+
+    <!-- Element - скипает узлы и доводит до самого элемента
+
+    parentElementNode
+    childElementNodes
+    firstElementChild
+    lastElementChild
+    previousElementSibling
+    nextElementSibling -->
+
+    
+    <script>
+        let block_1 = document.getElementById('block-1')
+        let block_2 = document.getElementById('block-2')
+
+        block_1.onclick = colorGreen
+        block_2.onclick = colorGreen
+
+        block_1.addEventListener('click', border) //слушатель событий несколько событий в  одной*
+
+        function colorGreen(){
+            this.classList.toggle('active')
+        }
+        function border(){
+            block_1.style.borderRadius = '100px'
+        }
+
+        console.log(block_1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(document);
+        // console.dir(document.body.firstChild.nextSibling);
+        // console.dir(document.head.lastChild.previousSibling);
+        // console.dir(document.body.firstChild.nextSibling.firstChild.nextSibling);
+        // console.dir(document.body.firstElementChild.firstElementChild);
+
+        // let ul = document.getElementById('ul_ID')
+        // ul.append('end') // начало этого тега
+        // ul.prepend('start') // конец тега
+
+        // ul.before('before')
+        // ul.after('after')        
+        
+        // let li = document.createElement('li')
+        // li.innerText = 'lorem'
+
+        // ul.append(li)
+        // ul.style.color = 'red'
+        // ul.style.backgroundColor = 'red'
+        // ul.classList.add('ul-class')
+        // ul.classList.contains('ul-class') - проверяет есть ли класс и выводит булевый тип 1 или 0
+        // ul.classList.remove('ul-class')
+        // ul.classList.toggle('ul-class') - при нажатии доб класс если его нет, а если класс есть то удаляет
+        
+        
+        // console.log(ul);
+
+
+
+        // console.log(document.body.innerHTML); - показывает что есть на сайте фулл файл html
+        // console.log(document.body.innerHTML = ''); - присваивает ничего*
+        
+        // let li = document.getElementsByClassName('li')
+        // console.log(li);
+
+
+
+
+
+
+    </script>
 </body>
 </html>
